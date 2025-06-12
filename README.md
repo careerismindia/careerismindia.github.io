@@ -5,7 +5,7 @@ This is the official personal website of **Ratnesh Pati**, a student at **IIT Bo
 
 ## 🌐 Live Website
 
-👉 [https://ratnesh-pati.github.io](https://ratnesh-pati.github.io)
+👉 [https://ratnesh-pati.github.io](https://ratnesh.github.io)
 
 ---
 
