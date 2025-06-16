@@ -6,6 +6,12 @@
   <title>Blog | Ratnesh Pati</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <script>
+    function toggleArticle(id) {
+      const content = document.getElementById(id);
+      content.classList.toggle('hidden');
+    }
+  </script>
 </head>
 <body class="bg-gradient-to-br from-gray-50 via-blue-100 to-purple-50 text-gray-800">
 
@@ -17,11 +23,11 @@
         <h1 class="text-xl font-bold">Ratnesh Pati</h1>
       </div>
       <nav class="space-x-4">
-        <a href="index.html" class="hover:underline">Home</a>
-        <a href="products.html" class="hover:underline">Products</a>
-        <a href="services.html" class="hover:underline">Services</a>
-        <a href="blogs.html" class="text-blue-600 font-semibold underline">Blog</a>
-        <a href="contact.html" class="hover:underline">Contact</a>
+        <a href="../index.html" class="hover:underline">Home</a>
+        <a href="../products.html" class="hover:underline">Products</a>
+        <a href="../services.html" class="hover:underline">Services</a>
+        <a href="../blogs.html" class="text-blue-600 font-semibold underline">Blog</a>
+        <a href="../contact.html" class="hover:underline">Contact</a>
       </nav>
     </div>
   </header>
@@ -30,83 +36,51 @@
   <main class="max-w-6xl mx-auto px-4 py-16">
     <h2 class="text-3xl font-bold text-center mb-12">Explore Our Latest Articles</h2>
 
-    <!-- Article 1 -->
-    <article class="bg-white p-8 rounded-xl shadow-md mb-12">
-      <h3 class="text-2xl font-bold mb-4">1. The Creative History of Data Science</h3>
-      <p class="text-gray-700 leading-7 space-y-4">
-        <!-- (Content unchanged for brevity) -->
-      </p>
-    </article>
-
-    <!-- Article 2 -->
-    <article class="bg-white p-8 rounded-xl shadow-md mb-12">
-      <h3 class="text-2xl font-bold mb-4">2. Data Science Roadmap: Scratch to GenAI</h3>
-      <p class="text-gray-700 leading-7 space-y-4">
-        Embarking on a journey into data science can be daunting—but with a clear roadmap, you can navigate from foundational concepts to cutting-edge Generative AI. Here’s a strategic, creative path to mastery:
-        <br><br>
-        <strong>Phase 1: Lay the Groundwork</strong><br>
-        - Learn basic statistics: mean, median, variance, correlation<br>
-        - Get comfortable with probability and distributions<br>
-        - Study linear algebra (vectors, matrices) and calculus basics
-        <br>
-        Tools: Khan Academy, MIT OpenCourseWare, YouTube (StatQuest)
-        <br><br>
-        <strong>Phase 2: Programming Fundamentals</strong><br>
-        - Choose Python (preferred) or R<br>
-        - Focus on data structures, loops, functions, and file I/O<br>
-        - Learn Git and version control
-        <br>
-        Tools: Python (Jupyter Notebooks), GitHub, VS Code
-        <br><br>
-        <strong>Phase 3: Data Handling & Visualization</strong><br>
-        - Master libraries: NumPy, Pandas<br>
-        - Learn data cleaning, transformation, and manipulation<br>
-        - Visualize data using Matplotlib, Seaborn, or Plotly
-        <br><br>
-        <strong>Phase 4: Machine Learning Basics</strong><br>
-        - Understand Supervised vs. Unsupervised learning<br>
-        - Learn algorithms: Linear Regression, Decision Trees, KNN, Clustering<br>
-        - Model evaluation: accuracy, precision, recall, F1
-        <br>
-        Tools: Scikit-learn, Google Colab
-        <br><br>
-        <strong>Phase 5: Projects & Practice</strong><br>
-        - Work on real-world datasets (Kaggle, UCI ML repo)<br>
-        - Create dashboards with Streamlit or Flask<br>
-        - Practice storytelling with data
-        <br><br>
-        <strong>Phase 6: Deep Learning & Neural Networks</strong><br>
-        - Study concepts: neural nets, backpropagation, activation functions<br>
-        - Learn frameworks: TensorFlow, Keras, PyTorch<br>
-        - Build models for image, text, and audio data
-        <br><br>
-        <strong>Phase 7: Specializations & NLP</strong><br>
-        - Dive into Natural Language Processing (NLP)<br>
-        - Learn spaCy, NLTK, HuggingFace Transformers<br>
-        - Work on chatbot, summarization, sentiment analysis projects
-        <br><br>
-        <strong>Phase 8: GenAI & Cutting-edge Tools</strong><br>
-        - Understand Generative AI: GANs, Diffusion Models, LLMs<br>
-        - Explore tools like OpenAI, Cohere, Google Gemini<br>
-        - Experiment with building custom AI agents and copilots
-        <br><br>
-        <strong>Final Tip:</strong> Join communities (Kaggle, Reddit, Discord), participate in hackathons, write blogs, and build a portfolio to showcase your expertise.
-        <br><br>
-        The road is long, but immensely rewarding. Every step opens new possibilities—and with persistence, you'll not only master data science, you'll shape the future of AI.
-      </p>
-    </article>
-
-    <!-- Placeholder for more articles -->
-    <div class="grid gap-6 sm:grid-cols-2">
-      <a href="#" class="block bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+    <!-- Article Links -->
+    <div class="grid gap-6 sm:grid-cols-2 mb-10">
+      <button onclick="toggleArticle('article1')" class="text-left block w-full bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">1. The Creative History of Data Science</h3>
+        <p class="text-gray-700">Discover the fascinating evolution of data science over centuries.</p>
+      </button>
+      <button onclick="toggleArticle('article2')" class="text-left block w-full bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">2. Data Science Roadmap: Scratch to GenAI</h3>
+        <p class="text-gray-700">An end-to-end roadmap covering tools, skills, and trends from basics to GenAI.</p>
+      </button>
+      <button onclick="toggleArticle('article3')" class="text-left block w-full bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
         <h3 class="text-xl font-semibold mb-2">3. [Coming Soon]</h3>
         <p class="text-gray-700">Another exciting article is in the works. Stay tuned!</p>
-      </a>
-      <a href="#" class="block bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      </button>
+      <button onclick="toggleArticle('article4')" class="text-left block w-full bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
         <h3 class="text-xl font-semibold mb-2">4. [Coming Soon]</h3>
         <p class="text-gray-700">We're working on something valuable. Keep an eye on this space!</p>
-      </a>
+      </button>
     </div>
+
+    <!-- Article 1 -->
+    <article id="article1" class="bg-white p-8 rounded-xl shadow-md mb-12 hidden">
+      <h3 class="text-2xl font-bold mb-4">1. The Creative History of Data Science</h3>
+      <p class="text-gray-700 leading-7 space-y-4">
+        Data science, as a field, didn’t emerge overnight—it evolved through centuries of human curiosity, analytical thinking, and technological revolutions. It started with the simple act of counting and evolved into a multidisciplinary powerhouse that influences nearly every sector today.
+        <br><br>
+        <strong>1. Ancient Beginnings:</strong> The earliest forms of data analysis can be traced back to ancient civilizations like the Egyptians and Babylonians, who used rudimentary tools to record trade, taxes, and astronomy. These primitive "data logs" were essential for managing empires and agriculture.
+        <br><br>
+        <strong>2. The Age of Statistics:</strong> The formal study of statistics began in the 17th and 18th centuries. Thinkers like John Graunt and Carl Friedrich Gauss pioneered methods that remain foundational today. Probability theory emerged during this period, laying the groundwork for understanding uncertainty.
+        <br><br>
+        <strong>3. Computers Change Everything:</strong> The 20th century marked a turning point with the invention of electronic computers. Alan Turing’s work provided a theoretical basis for computation. By the 1960s, computing became accessible to researchers, enabling the first wave of computer-assisted data analysis.
+        <br><br>
+        <strong>4. The Rise of Business Intelligence:</strong> In the 1970s and 80s, data collection accelerated in business. Database management systems and SQL gave birth to business intelligence. Organizations began to use historical data to forecast trends and inform decisions.
+        <br><br>
+        <strong>5. Machine Learning Awakens:</strong> In the 1990s and early 2000s, with the advent of massive computing power and open-source tools, machine learning became more than academic curiosity. Algorithms like decision trees, neural networks, and support vector machines gained popularity.
+        <br><br>
+        <strong>6. Data Becomes Big:</strong> The 2010s brought the explosion of Big Data. Cloud computing, Hadoop, Spark, and distributed systems enabled the analysis of petabytes of structured and unstructured data. Data science formally emerged as a new job title, blending programming, stats, and domain knowledge.
+        <br><br>
+        <strong>7. The Age of Deep Learning:</strong> Deep learning, fueled by GPUs and large datasets, made possible image recognition, NLP, and autonomous systems. Tools like TensorFlow, PyTorch, and transfer learning made AI accessible to businesses and individuals alike.
+        <br><br>
+        <strong>8. GenAI Revolution:</strong> The release of GPT models, diffusion models, and other generative techniques in the 2020s has transformed data science into a creative engine. It's no longer just about prediction—now, it's about creation. Data scientists are artists, architects, and analysts rolled into one.
+        <br><br>
+        <strong>Conclusion:</strong> The history of data science is a story of human ingenuity. From tally marks to transformers, it reflects our evolving relationship with information and the boundless possibilities when math meets meaning. As we move forward, data science will continue to redefine how we learn, live, and innovate.
+      </p>
+    </article>
   </main>
 
   <!-- Footer -->
