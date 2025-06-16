@@ -9,10 +9,14 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body class="bg-gradient-to-br from-gray-50 via-blue-100 to-purple-50 text-gray-800">
+
   <!-- Header -->
   <header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold">Ratnesh Pati</h1>
+      <div class="flex items-center gap-4">
+        <img src="assets/logo.png" alt="Company Logo" class="h-10 w-10 rounded-full">
+        <h1 class="text-xl font-bold">Ratnesh Pati</h1>
+      </div>
       <nav class="space-x-4">
         <a href="index.html" class="hover:underline">Home</a>
         <a href="products.html" class="text-blue-600 font-semibold underline">Products</a>
@@ -25,57 +29,42 @@
 
   <!-- Main Content -->
   <main class="max-w-6xl mx-auto px-4 py-16">
-    <h2 class="text-3xl font-bold text-center mb-8">AI, ML & Data Science Services</h2>
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Predictive Modelling -->
-      <div class="bg-white rounded-xl shadow-md p-6 flex items-start gap-4">
-        <img src="predictive_modelling.jpg" alt="Predictive Modeling" class="w-50 h-50">
-        <div>
-          <h3 class="text-xl font-semibold mb-1">Predictive Modelling Services</h3>
-          <p class="text-gray-700">Build data-driven models for forecasting, risk assessment, customer segmentation, and demand planning.</p>
-        </div>
+    <h2 class="text-3xl font-bold text-center mb-12">AI, ML & Data Science Services</h2>
+    <div class="grid gap-10 grid-cols-1 sm:grid-cols-2">
+      <!-- Each Card -->
+      <div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center">
+        <img src="predictive_modelling.jpg" alt="Predictive Modeling" class="w-40 h-40 object-contain mb-4">
+        <h3 class="text-xl font-semibold mb-2">Predictive Modelling Services</h3>
+        <p class="text-gray-700">Build data-driven models for forecasting, risk assessment, customer segmentation, and demand planning.</p>
       </div>
 
-      <!-- Machine & Deep Learning -->
-      <div class="bg-white rounded-xl shadow-md p-6 flex items-start gap-4">
-        <img src="deep learning.avif" alt="Machine Learning" class="w-50 h-50">
-        <div>
-          <h3 class="text-xl font-semibold mb-1">Machine Learning & Deep Learning</h3>
-          <p class="text-gray-700">Custom ML/DL pipelines: model training, evaluation & deployment for classification, image/video analysis, NLP, and more.</p>
-        </div>
+      <div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center">
+        <img src="deep learning.avif" alt="Machine Learning" class="w-40 h-40 object-contain mb-4">
+        <h3 class="text-xl font-semibold mb-2">Machine Learning & Deep Learning</h3>
+        <p class="text-gray-700">Custom ML/DL pipelines: model training, evaluation & deployment for classification, image/video analysis, NLP, and more.</p>
       </div>
 
-      <!-- AI Agent -->
-      <div class="bg-white rounded-xl shadow-md p-6 flex items-start gap-4">
-        <img src="coding.png" alt="AI Agent" class="w-50 h-50">
-        <div>
-          <h3 class="text-xl font-semibold mb-1">AI‑Agent Based Services</h3>
-          <p class="text-gray-700">Develop autonomous agents to handle tasks like chat, document processing, or embedded operational intelligence.</p>
-        </div>
+      <div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center">
+        <img src="coding.png" alt="AI Agent" class="w-40 h-40 object-contain mb-4">
+        <h3 class="text-xl font-semibold mb-2">AI‑Agent Based Services</h3>
+        <p class="text-gray-700">Develop autonomous agents to handle tasks like chat, document processing, or embedded operational intelligence.</p>
       </div>
 
-      <!-- AI Chatbots -->
-      <div class="bg-white rounded-xl shadow-md p-6 flex items-start gap-4">
-        <img src="chatbot.png" alt="AI Chatbot" class="w-50 h-50">
-        <div>
-          <h3 class="text-xl font-semibold mb-1">AI Chatbot Services</h3>
-          <p class="text-gray-700">Multichannel chatbots capable of customer support, sentiment analysis, or knowledge-base lookup.</p>
-        </div>
+      <div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center">
+        <img src="chatbot.png" alt="AI Chatbot" class="w-40 h-40 object-contain mb-4">
+        <h3 class="text-xl font-semibold mb-2">AI Chatbot Services</h3>
+        <p class="text-gray-700">Multichannel chatbots capable of customer support, sentiment analysis, or knowledge-base lookup.</p>
       </div>
 
-      <!-- Personalized Chatbot -->
-      <div class="bg-white rounded-xl shadow-md p-6 flex items-start gap-4">
-        <img src="assistant.png" alt="Personalized Chatbot" class="w-50 h-50">
-        <div>
-          <h3 class="text-xl font-semibold mb-1">Personalized Chatbot Services</h3>
-          <p class="text-gray-700">Tailored chatbots designed specifically for your organization’s tone, domain, and workflows.</p>
-        </div>
+      <div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center">
+        <img src="assistant.png" alt="Personalized Chatbot" class="w-40 h-40 object-contain mb-4">
+        <h3 class="text-xl font-semibold mb-2">Personalized Chatbot Services</h3>
+        <p class="text-gray-700">Tailored chatbots designed specifically for your organization’s tone, domain, and workflows.</p>
       </div>
 
-      <!-- Additional data science services -->
-      <div class="bg-white rounded-xl shadow-md p-6">
+      <div class="bg-white rounded-xl shadow-md p-6 text-center">
         <h3 class="text-xl font-semibold mb-4">Full‑Stack Data Science & AI Stack</h3>
-        <ul class="list-disc list-inside text-gray-700 space-y-1">
+        <ul class="list-disc list-inside text-gray-700 space-y-1 text-left">
           <li>Data Science & AI Consulting</li>
           <li>NLP & Language Model Solutions</li>
           <li>OCR, Recommendation Systems & Embedded AI</li>
@@ -88,10 +77,17 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-white shadow mt-12">
-    <div class="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-600">
-      © 2025 Ratnesh Pati. All rights reserved.
+  <footer class="relative bg-cover bg-center text-white mt-20" style="background-image: url('assets/footer-bg.jpg');">
+    <div class="bg-black bg-opacity-60">
+      <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-4">
+          <img src="assets/logo.png" alt="Company Logo" class="h-12 w-12">
+          <span class="text-lg font-semibold">Ratnesh Pati Solutions</span>
+        </div>
+        <p class="text-sm text-center sm:text-right">© 2025 Ratnesh Pati. All rights reserved.</p>
+      </div>
     </div>
   </footer>
+
 </body>
 </html>
