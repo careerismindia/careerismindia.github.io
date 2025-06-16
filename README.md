@@ -58,7 +58,7 @@ This is the official personal website of **Ratnesh Pati**, a student at **IIT Bo
 
 ## 📬 Contact
 
-- 📧 Email: [ratnesh.stat@iitb.ac.in](mailto:ratnesh.stat@iitb.ac.in)
+- 📧 Email: [ratnesh.stat@iitb.ac.in](mailto:careerismindia@gmail.com)
 - 🔗 LinkedIn: [in.linkedin.com/in/ratnesh-pati-tripathi-603482270](https://in.linkedin.com/in/ratnesh-pati-tripathi-603482270)
 
 ---
