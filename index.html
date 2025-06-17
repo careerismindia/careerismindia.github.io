@@ -6,8 +6,13 @@
   <title>Home | Ratnesh Pati</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    body {
+      transition: background-color 0.5s, color 0.5s;
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-white text-gray-800 transition-colors duration-500" id="mainBody">
 
   <!-- Header -->
   <header class="bg-gray-200 shadow z-50">
@@ -20,7 +25,15 @@
         <a href="index.html" class="text-blue-600 font-semibold underline">Home</a>
         <a href="products.html" class="hover:underline">Products</a>
         <a href="services.html" class="hover:underline">Services</a>
-        <a href="blogs.html" class="hover:underline">Blog</a>
+
+        <div class="relative group">
+          <button class="hover:underline">Blog</button>
+          <div class="absolute hidden group-hover:block bg-white shadow-md mt-2 rounded border border-gray-200">
+            <a href="blogs/blog1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Blog 1</a>
+            <a href="blogs/blog2.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Blog 2</a>
+          </div>
+        </div>
+
         <a href="contact.html" class="hover:underline">Contact</a>
         <button id="toggleTheme" class="text-sm border border-gray-400 px-3 py-1 rounded hover:bg-gray-100">Light/Dark</button>
       </nav>
@@ -131,11 +144,13 @@
   <!-- Light/Dark Mode Script -->
   <script>
     const toggleBtn = document.getElementById('toggleTheme');
+    const body = document.getElementById('mainBody');
+
     toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('bg-white');
-      document.body.classList.toggle('bg-gray-900');
-      document.body.classList.toggle('text-gray-800');
-      document.body.classList.toggle('text-white');
+      body.classList.toggle('bg-white');
+      body.classList.toggle('bg-gray-900');
+      body.classList.toggle('text-gray-800');
+      body.classList.toggle('text-white');
     });
   </script>
 
