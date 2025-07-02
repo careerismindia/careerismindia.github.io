@@ -16,18 +16,25 @@
 <body class="bg-gradient-to-br from-gray-50 via-blue-100 to-purple-50 text-gray-800">
 
   <!-- Header -->
-  <header class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+  <header class="bg-gray-200 shadow z-50">
+    <div class="max-w-5xl mx-auto px-4 py-1 flex flex-wrap justify-between items-center">
       <div class="flex items-center gap-4">
-        <img src="../logo.png" alt="Company Logo" class="h-10 w-10 rounded-full">
-        <h1 class="text-xl font-bold">Ratnesh Pati</h1>
+        <img src="logo.png" alt="Company Logo" class="h-8 w-8 rounded-full max-w-full">
+        <h1 class="text-lg font-bold">Ratnesh Pati</h1>
       </div>
-      <nav class="space-x-4">
-        <a href="../index.html" class="hover:underline">Home</a>
-        <a href="../products.html" class="hover:underline">Products</a>
-        <a href="../services.html" class="hover:underline">Services</a>
-        <a href="../blogs.html" class="text-blue-600 font-semibold underline">Blog</a>
-        <a href="../contact.html" class="hover:underline">Contact</a>
+      <nav class="flex flex-wrap justify-end gap-2 mt-2 sm:mt-0">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="products.html" class="hover:underline">Products</a>
+        <a href="services.html" class="hover:underline">Services</a>
+        <div class="relative group">
+          <button class="hover:underline">Blog</button>
+          <div class="absolute hidden group-hover:block bg-white shadow-md mt-2 rounded border border-gray-200 z-10">
+            <a href="blogs/blog1.html" class="text-blue-600 font-semibold underline">Blog 1</a>
+            <a href="blogs/blog2.html" class="text-blue-600 font-semibold underline">Blog 2</a>
+          </div>
+        </div>
+        <a href="contact.html" class="hover:underline">Contact</a>
+        <button id="toggleTheme" class="text-sm border border-gray-400 px-3 py-1 rounded hover:bg-gray-100">Light/Dark</button>
       </nav>
     </div>
   </header>
