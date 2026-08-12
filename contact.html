@@ -5,74 +5,399 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Contact | Ratnesh Pati</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <script>
-    function showThankYou(event) {
-      event.preventDefault();
-      document.getElementById('contact-form').classList.add('hidden');
-      document.getElementById('thank-you-message').classList.remove('hidden');
-    }
-  </script>
 </head>
+
 <body class="bg-gradient-to-br from-gray-50 via-blue-100 to-purple-50 text-gray-800">
-   <header class="bg-gray-200 shadow z-50">
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+  <header class="bg-gray-200 shadow z-50">
     <div class="max-w-5xl mx-auto px-4 py-1 flex flex-wrap justify-between items-center">
+
+      <!-- Logo + Name -->
       <div class="flex items-center gap-4">
-        <img src="logo.png" alt="Company Logo" class="h-8 w-8 rounded-full max-w-full">
-        <h1 class="text-lg font-bold">Ratnesh Pati</h1>
+        <img
+          src="logo.png"
+          alt="Company Logo"
+          class="h-8 w-8 rounded-full max-w-full"
+        >
+
+        <h1 class="text-lg font-bold">
+          Ratnesh Pati
+        </h1>
       </div>
+
+      <!-- Navigation -->
       <nav class="flex flex-wrap justify-end gap-2 mt-2 sm:mt-0">
-        <a href="index.html" class="hover:underline">Home</a>
-        <a href="products.html" class="hover:underline">Products</a>
-        <a href="services.html" class="hover:underline">Services</a>
-        <a href="blogs.html" class="hover:underline">Blogs</a>
-        <a href="contact.html" class="text-blue-600 font-semibold underline">Contact</a>
-        <button id="toggleTheme" class="text-sm border border-gray-400 px-3 py-1 rounded hover:bg-gray-100">Light/Dark</button>
+
+        <a
+          href="index.html"
+          class="hover:underline"
+        >
+          Home
+        </a>
+
+        <a
+          href="products.html"
+          class="hover:underline"
+        >
+          Products
+        </a>
+
+        <a
+          href="services.html"
+          class="hover:underline"
+        >
+          Services
+        </a>
+
+        <a
+          href="blogs.html"
+          class="hover:underline"
+        >
+          Blogs
+        </a>
+
+        <a
+          href="contact.html"
+          class="text-blue-600 font-semibold underline"
+        >
+          Contact
+        </a>
+
+        <button
+          id="toggleTheme"
+          type="button"
+          class="text-sm border border-gray-400 px-3 py-1 rounded hover:bg-gray-100"
+        >
+          Light/Dark
+        </button>
+
       </nav>
     </div>
   </header>
 
+
+  <!-- =========================
+       MAIN CONTACT SECTION
+  ========================== -->
   <main class="max-w-4xl mx-auto px-4 py-16">
-    <h2 class="text-3xl font-bold text-center mb-8">Get in Touch</h2>
-    <form id="contact-form" onsubmit="showThankYou(event)" class="bg-white rounded-xl shadow-md p-8 space-y-6">
+
+    <!-- Heading -->
+    <h2 class="text-3xl font-bold text-center mb-8">
+      Get in Touch
+    </h2>
+
+
+    <!-- =========================
+         CONTACT FORM
+    ========================== -->
+    <form
+      id="contact-form"
+      action="https://formspree.io/f/xkjwbbdj"
+      method="POST"
+      class="bg-white rounded-xl shadow-md p-8 space-y-6"
+    >
+
+      <!-- Name -->
       <div>
-        <label for="name" class="block text-sm font-medium mb-1">Name</label>
-        <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded border">
+        <label
+          for="name"
+          class="block text-sm font-medium mb-1"
+        >
+          Name
+        </label>
+
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Enter your name"
+          class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
       </div>
+
+
+      <!-- Email -->
       <div>
-        <label for="email" class="block text-sm font-medium mb-1">Email</label>
-        <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded border">
+        <label
+          for="email"
+          class="block text-sm font-medium mb-1"
+        >
+          Email
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          name="_replyto"
+          required
+          placeholder="Enter your email"
+          class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
       </div>
+
+
+      <!-- Message -->
       <div>
-        <label for="message" class="block text-sm font-medium mb-1">Message</label>
-        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 rounded border"></textarea>
+        <label
+          for="message"
+          class="block text-sm font-medium mb-1"
+        >
+          Message
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          required
+          placeholder="Write your message here..."
+          class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        ></textarea>
       </div>
+
+
+      <!-- Email Subject -->
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Contact Message from Careerism India Website"
+      >
+
+
+      <!-- Submit Button -->
       <div class="text-center">
-        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Send Message</button>
+
+        <button
+          id="submit-button"
+          type="submit"
+          class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-200"
+        >
+          Send Message
+        </button>
+
       </div>
+
+
+      <!-- Error Message -->
+      <div
+        id="error-message"
+        class="hidden text-center p-4 bg-red-100 text-red-700 rounded-lg"
+      >
+        <p>
+          Something went wrong while sending your message.
+          Please try again.
+        </p>
+      </div>
+
     </form>
 
-    <div id="thank-you-message" class="hidden text-center mt-12 p-6 bg-green-100 text-green-700 rounded-lg">
-      <h3 class="text-2xl font-bold mb-2">Thank You!</h3>
-      <p>Your message has been sent. I’ll get back to you soon!</p>
+
+    <!-- =========================
+         SUCCESS MESSAGE
+    ========================== -->
+    <div
+      id="thank-you-message"
+      class="hidden text-center mt-12 p-6 bg-green-100 text-green-700 rounded-lg"
+    >
+
+      <h3 class="text-2xl font-bold mb-2">
+        Thank You!
+      </h3>
+
+      <p>
+        Your message has been sent successfully.
+        I’ll get back to you soon!
+      </p>
+
     </div>
 
+
+    <!-- =========================
+         SOCIAL / CONTACT LINKS
+    ========================== -->
     <div class="mt-12 text-center text-sm">
-      <p>Connect with me on:</p>
+
+      <p>
+        Connect with me on:
+      </p>
+
       <div class="flex justify-center mt-2 space-x-4">
-        <a href="mailto:careerismindia@gmail.com" class="text-blue-600 hover:underline">Email</a>
-        <a href="https://linkedin.com/in/ratnesh-pati-tripathi-603482270" target="_blank" class="text-blue-600 hover:underline">LinkedIn</a>
-        <a href="#" class="text-blue-600 hover:underline">Twitter</a>
+
+        <!-- Email -->
+        <a
+          href="mailto:careerismindia@gmail.com"
+          class="text-blue-600 hover:underline"
+        >
+          Email
+        </a>
+
+
+        <!-- LinkedIn -->
+        <a
+          href="https://linkedin.com/in/ratnesh-pati-tripathi-603482270"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-blue-600 hover:underline"
+        >
+          LinkedIn
+        </a>
+
+
+        <!-- Twitter -->
+        <a
+          href="#"
+          class="text-blue-600 hover:underline"
+        >
+          Twitter
+        </a>
+
       </div>
     </div>
+
   </main>
 
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
   <footer class="bg-white shadow mt-12">
+
     <div class="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-600">
+
       © 2025 Ratnesh Pati. All rights reserved.
+
     </div>
+
   </footer>
+
+
+  <!-- =========================
+       FORMSPREE AJAX
+  ========================== -->
+  <script>
+
+    const form = document.getElementById("contact-form");
+    const submitButton = document.getElementById("submit-button");
+
+    const thankYouMessage =
+      document.getElementById("thank-you-message");
+
+    const errorMessage =
+      document.getElementById("error-message");
+
+
+    form.addEventListener("submit", async function (event) {
+
+      // Prevent the browser's default form submission
+      event.preventDefault();
+
+
+      // Hide previous messages
+      thankYouMessage.classList.add("hidden");
+      errorMessage.classList.add("hidden");
+
+
+      // Disable button while submitting
+      submitButton.disabled = true;
+
+      submitButton.textContent = "Sending...";
+
+
+      // Collect form data
+      const formData = new FormData(form);
+
+
+      try {
+
+        const response = await fetch(
+          "https://formspree.io/f/xkjwbbdj",
+          {
+            method: "POST",
+
+            body: formData,
+
+            headers: {
+              "Accept": "application/json"
+            }
+          }
+        );
+
+
+        // Check whether Formspree accepted the submission
+        if (response.ok) {
+
+          // Clear form
+          form.reset();
+
+          // Hide form
+          form.classList.add("hidden");
+
+          // Show success message
+          thankYouMessage.classList.remove("hidden");
+
+        } else {
+
+          // Show error
+          errorMessage.classList.remove("hidden");
+
+        }
+
+      } catch (error) {
+
+        console.error(
+          "Form submission error:",
+          error
+        );
+
+        errorMessage.classList.remove("hidden");
+
+      } finally {
+
+        // Enable button again
+        submitButton.disabled = false;
+
+        submitButton.textContent = "Send Message";
+
+      }
+
+    });
+
+  </script>
+
+
+  <!-- =========================
+       OPTIONAL THEME TOGGLE
+  ========================== -->
+  <script>
+
+    const toggleTheme =
+      document.getElementById("toggleTheme");
+
+
+    if (toggleTheme) {
+
+      toggleTheme.addEventListener("click", function () {
+
+        document.body.classList.toggle("dark");
+
+      });
+
+    }
+
+  </script>
+
 </body>
+</html>
 </html>
